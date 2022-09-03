@@ -1,0 +1,9 @@
+%p{:style => "color: green"}= notice
+%h1 Articles
+#articles
+  - @articles.each do |article|
+    = render article
+    = article.id
+    %p
+      = link_to "Show this article", article
+= link_to "New article", new_article_path
